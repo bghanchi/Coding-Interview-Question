@@ -1,3 +1,10 @@
-arr = [7, 5, 5, 6, 9, 4, 5, 4, 4, 5, 9, 5, 4] 
-res = max(set(arr), key = arr.count) 
-print(res)
+try:
+    n = int(input("Enter Length of Array : "))
+    arr = []
+    print("Enter Array Elements :")
+    for i in range(n):
+        arr.append(int(input()))
+    res = max(set(arr), key = arr.count) 
+    print("\nMax. Frequency Element : ", res)
+except:
+    print("Please provide valid inputs!")
