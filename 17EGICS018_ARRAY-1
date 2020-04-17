@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int m=0,n;
+	printf("Enter the size of an array:");
+	scanf("%d",&n);
+	int a[50],i,j,max=0;
+	int b[50]={0};
+	printf("Enter array elements: \n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		while(a[i]%10!=0)
+		{
+			j=a[i]%10;
+			a[i]=a[i]/10;
+		    b[j]=b[j]+1;	
+	    }
+	}
+	for(j=0;j<n;j++)
+	{
+		if(b[j]>max){
+			max=b[j];
+			m=j;
+		}
+	}
+	printf("\n%d is the maximum frequency of %d",max,m);
+}
