@@ -3,20 +3,25 @@ using namespace std;
 
 int main()
 {
-	int size;
-	cin>>size;
-	char arr[size];
-	char answer[size];
-	cin>>arr;
-	int s;
-	cin>>s;
-	s=s%size;
-	for(int i=0;i<size;i++)
+	int n,count;
+	cin>>n;
+	vector<int> v(n);
+	for(int i=0;i<n;i++)
+		cin>>v[i];
+	for(int i=0;i<n;i++)
 	{
-		answer[s]=arr[i];
-		s++;
-		if(s==size)
-			s=0;
-	}
-	cout<<answer;
+		count=0;
+		for(int j=i;j<n;j++)
+		{
+			if(v[i]==v[j])
+			{
+				count++;
+			}
+		}
+		if(count==1)
+		{
+			cout<<v[i];
+			break;
+		}
+	}	
 }
