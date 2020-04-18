@@ -1,0 +1,8 @@
+n = int(input())
+da = list(input())
+s = int(input())
+arr = []
+for i in range(0,n):
+  arr.insert((i+s)%(n),da[i])
+print()
+print("".join(arr))
