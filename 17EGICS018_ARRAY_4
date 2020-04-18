@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void main()
+{
+	int n,s,i,r;
+	printf("Enter the array size: \n");
+	scanf("%d",&n);
+	char a[n],b[1000];
+	printf("Enter the no of places you want to shift : ");
+	scanf("%d",&s);
+	printf("Enter character of array : \n");
+	scanf("%s",&a);
+	strcpy(b,a);
+	strcat(b,a);
+	r = s%n;
+	if(r==1)
+	{
+		int x = b[n-1]; 
+	    for (i=n-1;i>0;i--) 
+	    b[i] = b[i-1];  
+	    b[0] = x;
+		for(i=0;i<n;i++)
+		{
+			printf("%c",b[i]);
+		}
+	}
+	
+	else
+	{
+		for(i=r;i<n+r;i++)
+		{
+			printf("%c",b[i]);
+		}
+	}
+}
