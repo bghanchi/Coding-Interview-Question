@@ -18,8 +18,13 @@ for i in range(0,n):
 		sum=sum+a[i]
 		c+=1
 		dict[sum]=c
-print(max(dict,key=dict.get))
 
-	
-		
+maxlength = 0
+maxsum = min(dict)
+for x in dict:
+	if dict[x]>=maxlength:
+		maxlength = dict[x]
+		if x>maxsum:
+			maxsum = x
 
+print("\n"+str(maxsum))
