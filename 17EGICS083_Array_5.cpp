@@ -23,29 +23,37 @@ int main()
 			{
 				temp_count++;
 				temp_sum= temp_sum+a[i];
+
 			}
 			else
 			{
+				
 				if(count<temp_count)
 				{
+	
 					count= temp_count;
+					
 					sum=temp_sum;
 				}
 				temp_count=1;
 				temp_sum=a[i];
+
 			}
 		}
-		else
+		else 
 		{
-			if(a[i]>a[i-1])
+		
+			if((a[i]) > (a[i-1]))
 			{
-				count++;
+				
+				temp_count++;
 				temp_sum=temp_sum+a[i];
-				if(count<temp_count)
-				{
-					count=temp_count;
-					sum=temp_sum;
-				}
+			}
+		
+			if (count < temp_count)
+			{      
+					count = temp_count;
+					sum = temp_sum;
 			}
 		}
 	
