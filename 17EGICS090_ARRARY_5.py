@@ -20,8 +20,13 @@ else:
 		temp.append(array[i])
 	subarray.append(temp)
 
-length = list(map(lambda x: len(x), subarray))
-maxsubarrayindex = length.index(max(length))
+maxsum = min(array)
+maxlength = 0
+for sa in subarray:
+	if len(sa)>=maxlength:
+		temp = sum(sa)
+		if temp>maxsum:
+			maxsum = temp
+			maxlength = len(sa)
 print()
-print(sum(subarray[maxsubarrayindex]))
-	
+print(maxsum)
