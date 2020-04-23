@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    int n,i,j,max=0;
+    printf("enter no of elements you want to enter");
+    scanf("%d",&n);
+    printf("enter array elements");
+    int a[n],b[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Leaders are")
+    for(i=n-1;i>=0;i--)
+    {
+        if(max<a[i])
+        {
+            printf("%d",a[i]);
+            max=a[i];
+        }
+    }
+
+
+    return 0;
+}
