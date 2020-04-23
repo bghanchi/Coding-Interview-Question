@@ -1,10 +1,11 @@
 #Task 7
-def checkleader(ele,arr):
-	for i in arr:
-		if ele<=i:
-			return False
-	return True
 array = list(map(int,input().split()))
-for i in array:
-	if checkleader(i,array[array.index(i)+1:-1]):
-		print(i,end=" ")
+N = len(array)
+for i in range(0,N):
+	flag = 0
+	for j in range(i+1,N):
+		if array[j]>=array[i]:
+			flag=1
+			break
+	if flag==0:
+		print(array[i],end=" ")
