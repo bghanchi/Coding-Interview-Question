@@ -2,6 +2,7 @@
 #prod[i] is equal to the product of all the elements of arr[] except arr[i]. Solve it without division 
 #operator and in O(n)
 
+import math
 #input
 size=int(input(("Enter the size of array: ")))
 s=size
