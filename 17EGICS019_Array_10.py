@@ -7,6 +7,8 @@ try:
         arr.append(int(input()))
     if t < arr[0]:
         res = 0
+    elif t > arr[-1]:
+        res = len(arr)
     else:
         for i in range(n):
             if arr[i] == t or (i and arr[i] > t and arr[i-1] < t):
