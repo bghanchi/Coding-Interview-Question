@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	int *p;
-	int n,i,target;
+	int n,i,target,lb,ub,mid;
 	cout<<"Enter Size of array:";
 	cin>>n;
 	p=new int[n];
@@ -19,18 +19,33 @@ int main()
 	}
 	cout<<"\nEnter Target Value:";
 	cin>>target;
-	for(i=0;i<n;i++)
+	lb=0;
+	ub=n-1;
+	mid=(lb+ub)/2;
+	while(lb<=ub)
 	{
-		if(p[i]==target)
+		if(target==p[mid])
 		{
-			cout<<i;
-			break;	
+			cout<<mid;
+			exit(0);
 		}
-		else if(target<p[i])
+		else if(target>p[mid])
 		{
-			cout<<p[i-1];
-			break;
-		}	
+			lb=mid+1;
+		}
+		else
+		{
+			ub=mid-1;
+		}
+		mid=(lb+ub)/2;
+	}
+	if(target>p[ub])
+	{
+		cout<<ub+1;
+	}
+	else
+	{
+		cout<<lb-1;
 	}
 	getch();
 	return 0;
