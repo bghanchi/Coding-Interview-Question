@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+	int n, t, i;
+	printf("Enter the size of the array: ");
+	scanf("\n%d",&n);
+	int a[50];
+	printf("Enter the array element: \n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("Enter the target value: \n");
+	scanf("%d",&t);
+	
+	for(i=0;i<n;i++)
+	{
+		if(a[i]==t){
+			printf("\n%d",i);
+			break;
+		}
+		else if(a[i]>t){
+			printf("\n%d",i);
+			break;
+		}
+		else if(i==n-1 && t<a[i]){
+				printf("\n%d",i+1);
+		}
+		else{
+			if(i==n-1 && t>a[i]){
+				printf("\n%d",n);
+			}
+		}
+	}
+	
+	return 0;
+}
