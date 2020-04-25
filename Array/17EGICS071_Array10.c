@@ -20,7 +20,7 @@ int main()
 	      printf("%d",i);
 	      break;
 		 }
-	if(flag==0 && a[i]>t)
+	if(flag==0 && (a[i]>t && a[i-1]<t))
 	{  printf("%d",i);
 		break;
 	   
