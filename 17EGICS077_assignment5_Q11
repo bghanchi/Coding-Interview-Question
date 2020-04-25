@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int k=0,i,l,j,sum;
+	printf("LENGHT OF ARRAY: ");
+	scanf("%d",&l);
+	int x[l];
+	printf("ENTER ARRAY ELEMENT :\n");
+	for(i=0;i<l;i++)
+	{
+		scanf("%d",&x[i]);
+	}
+	for(i=0;i<l;i++)
+	{
+		sum=0;
+		sum=x[i];
+		for(j=i+1;j<l;j++)
+		{
+			sum=sum+x[j];
+			if(k<sum)
+			{
+				k=sum;
+			}
+		}
+	}
+	printf("%d",k);
+}
