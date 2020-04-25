@@ -1,0 +1,26 @@
+#include<stdio.h>
+void main()
+{
+	int n,i;
+	printf("enter size of array");
+	scanf("%d",&n);
+	int a[n],curr_sum=0,max_sum=0;
+	printf("enter array elements\n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		curr_sum=curr_sum+a[i];
+		if(curr_sum<0)
+		{
+			curr_sum=0;
+		}
+		else if(max_sum<curr_sum)
+		{
+			max_sum=curr_sum;
+		}
+	}
+	printf("%d",max_sum);
+}
