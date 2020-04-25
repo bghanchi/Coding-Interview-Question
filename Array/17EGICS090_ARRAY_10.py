@@ -9,3 +9,6 @@ for i in range(0,n):
 	elif array[i]>t:
 		print(i)
 		break
+	elif i==n-1:
+	    print(n)
+	    break
