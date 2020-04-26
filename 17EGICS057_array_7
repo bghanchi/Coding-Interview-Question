@@ -1,15 +1,18 @@
 #include<stdio.h>
 void main()
 {
-  int a[5],i,j,f=0;
+  int n;
+  printf("enter size of array");
+  scanf("%d",&n);
+  int a[n],i,j,f=0;
   printf("enter array elements");
-  for(i=0;i<5;i++)
+  for(i=0;i<n;i++)
    {
      scanf("%d",&a[i]);
    }
-  for(i=0;i<5;i++)
+  for(i=0;i<n;i++)
   {
-     for(j=i+1;j<5;j++)
+     for(j=i+1;j<n;j++)
      {        
         if(a[i]>=a[j])
         {  
