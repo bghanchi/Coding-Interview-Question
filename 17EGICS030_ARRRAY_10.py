@@ -22,5 +22,14 @@ for i in range(n):
             n=n+1
             arr.insert(i,t)
             index=i
+if not flag and arr[n-1]<t:
+    arr.append(t)
+    index=n
+    flag=True
+elif not flag and arr[0]>t:
+    arr.insert(0,t)
+    index=0
+    flag=True
+
 print(arr)
 print("INDEX OF TARGET VALUE IN ARRAY: ",index)
