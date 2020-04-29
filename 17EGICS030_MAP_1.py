@@ -3,7 +3,7 @@
 # and it should return false if every element is distinct.
 
 size=int(input(("Enter the size of array: ")))
-print("Enter elemnts: ")
+print("Enter elements: ")
 
 d=dict()
 flag=False
