@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int l,i,t;
+	printf("LENGHT OF ARRAY: ");
+	scanf("%d",&l);
+	int x[l];
+	printf("TARGET VALUE: ");
+	scanf("%d",&t);
+	printf("ENTER ARRAY ELEMENT :\n");
+	for(i=0;i<l;i++)
+	{
+		scanf("%d",&x[i]);
+	}
+	for(i=0;i<l;i++)
+	{
+		if(t==x[i])
+		{
+			printf("postion is %d of element %d ",i,x[i]);
+		}
+		else if(t>x[i] && t<x[i+1])
+		{
+			printf("element %d is enter on postion %d",t,(i+1));
+		}
+	}
+}
