@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,n=0;
+    int flag;
+    printf("\nenter no of elements:");
+    scanf("%d",&n);
+    int a[n];
+    for (i=0; i<n; i++) {
+        scanf("%d",&a[i]);
+    }
+    for (i=0; i<n; i++)
+    {
+        flag = 1;
+        for(j=0;j<n;j++)
+        {
+            if(a[i] == a[j]&&i!=j)
+            {
+                flag = 0;
+            }
+        }
+        if(flag == 1)
+        {
+            printf("\nnon-repeating element is: '%d'\n",a[i]);
+        }
+    }
+    return 0;
+}
